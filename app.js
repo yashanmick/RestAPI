@@ -1,24 +1,25 @@
 const express = require('express');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const app = express();
-require('dotenv/config');
+// require('dotenv/config');
 
 //Import Routes
-const postsRoute = require('./routes/posts');
+// const postsRoute = require('./routes/posts');
 
-app.use('/posts', postsRoute);
+// app.use('/posts', postsRoute);
 
 //ROUTES
-app.get('/', (res, req) => {
+app.get('/', (req, res) => {
     res.send('We are on home');
 });
 
 //Connect to DB
-mongoose.connect(
-    process.env.DB_CONNECTION,
-    { useNewUrlParser: true , useUnifiedTopology: true },
-    () => console.log('connected to the database')
-);
+// mongoose.connect(
+//     process.env.DB_CONNECTION,
+//     { useNewUrlParser: true, useUnifiedTopology: true },
+//     () => console.log('connected to the database')
+// );
 
 //How do we start listening to the server
-app.listen(3000);
+app.listen(3000, () =>
+    console.log('RestAPI backend listen at http://localhost:3000'));

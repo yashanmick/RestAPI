@@ -1,16 +1,16 @@
-const express = require('express');
+// const express = require('express');
 
-const router = express.Router();
+// const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('We are on posts');
-});
+// router.get('/', (req, res) => {
+//     res.send('We are on posts');
+// });
 
-router.get('/specific', (req, res) => {
-    res.send('Specific post');
-});
+// router.get('/specific', (req, res) => {
+//     res.send('Specific post');
+// });
 
 
 
-module.exports = router;
+// module.exports = router;
 
